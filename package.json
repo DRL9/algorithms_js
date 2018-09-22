@@ -1,22 +1,28 @@
 {
-  "name": "algorithms_js",
-  "version": "1.0.0",
-  "description": "some algorithms written by javascript",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/DRL9/algorithms_js.git"
-  },
-  "keywords": [
-    "algorithms"
-  ],
-  "author": "DRL9",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/DRL9/algorithms_js/issues"
-  },
-  "homepage": "https://github.com/DRL9/algorithms_js#readme"
+    "name": "algorithms_js",
+    "version": "1.0.0",
+    "description": "some algorithms written by javascript",
+    "main": "index.js",
+    "scripts": {
+        "test": "jest"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/DRL9/algorithms_js.git"
+    },
+    "keywords": [
+        "algorithms"
+    ],
+    "author": "DRL9",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/DRL9/algorithms_js/issues"
+    },
+    "homepage": "https://github.com/DRL9/algorithms_js#readme",
+    "devDependencies": {
+        "@types/jest": "^23.3.2",
+        "jest": "^23.6.0",
+        "ts-jest": "^23.10.1",
+        "typescript": "^3.0.3"
+    }
 }
