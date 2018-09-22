@@ -1,0 +1,22 @@
+{
+  "name": "algorithms_js",
+  "version": "1.0.0",
+  "description": "some algorithms written by javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DRL9/algorithms_js.git"
+  },
+  "keywords": [
+    "algorithms"
+  ],
+  "author": "DRL9",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DRL9/algorithms_js/issues"
+  },
+  "homepage": "https://github.com/DRL9/algorithms_js#readme"
+}
