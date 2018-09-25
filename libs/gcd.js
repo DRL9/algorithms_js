@@ -47,4 +47,42 @@ function getIntersection(...sets) {
     );
 }
 
-module.exports = gcd1;
+module.exports.gcd1 = gcd1;
+
+/**
+ * method 2:
+ * Calculacte the common prime factorization of numbers, and then get the product of them. The result is the gcd.
+ */
+
+/**
+ * method 3 (Euclid's algorithm):
+ * the gcd of two numbers also divides their difference
+ * eg:
+ * gcd(a,b)=c
+ * a=c*a1
+ * b=c*b1
+ * a=b*x+y
+ * c*a1=c*b1*x+y
+ * y=c*(a1-b1*x)
+ */
+
+/**
+ *
+ * @param {number} num1
+ * @param {number} num2
+ * @returns {number}
+ */
+function gcd3(num1, num2) {
+    return getGCDbyEuclid(num1, num2);
+}
+
+function getGCDbyEuclid(num1, num2) {
+    let [max, min] = num1 > num2 ? [num1, num2] : [num2, num1];
+    let mod = max % min;
+    if (mod == 0) {
+        return min;
+    }
+    return getGCDbyEuclid(min, mod);
+}
+
+module.exports.gcd3 = gcd3;
