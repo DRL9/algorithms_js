@@ -4,7 +4,8 @@
     "description": "some algorithms written by javascript",
     "main": "index.js",
     "scripts": {
-        "test": "jest"
+        "lint": "eslint --fix --ext .js,.ts .",
+        "test": "vitest"
     },
     "repository": {
         "type": "git",
@@ -20,9 +21,14 @@
     },
     "homepage": "https://github.com/DRL9/algorithms_js#readme",
     "devDependencies": {
-        "@types/jest": "^23.3.2",
-        "jest": "^24.8.0",
-        "ts-jest": "^23.10.1",
-        "typescript": "^3.0.3"
+        "@rushstack/eslint-patch": "^1.2.0",
+        "eslint": "^8.23.1",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-config-recommended": "^4.1.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "prettier": "^2.7.1",
+        "typescript": "^3.0.3",
+        "vite": "^3.1.2",
+        "vitest": "^0.23.4"
     }
 }

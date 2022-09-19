@@ -12,8 +12,8 @@
  * @param {...number} numbers
  * @returns {number}
  */
-function gcd1(...numbers) {
-    return Math.max(...getIntersection(...numbers.map(getDivisors)));
+export function gcd1(...numbers) {
+  return Math.max(...getIntersection(...numbers.map(getDivisors)));
 }
 
 /**
@@ -22,18 +22,18 @@ function gcd1(...numbers) {
  * @returns {number[]}
  */
 function getDivisors(number) {
-    let divisors = [];
-    if (number == 1) {
-        divisors.push(1);
-    } else {
-        for (let i = 1; i <= number / 2; i++) {
-            if (number % i == 0) {
-                divisors.push(i);
-            }
-        }
-        divisors.push(number);
+  let divisors = [];
+  if (number == 1) {
+    divisors.push(1);
+  } else {
+    for (let i = 1; i <= number / 2; i++) {
+      if (number % i == 0) {
+        divisors.push(i);
+      }
     }
-    return divisors;
+    divisors.push(number);
+  }
+  return divisors;
 }
 
 /**
@@ -42,12 +42,10 @@ function getDivisors(number) {
  * @returns {number[]}
  */
 function getIntersection(...sets) {
-    return sets.reduce((preSet, curSet) =>
-        preSet.filter(num => curSet.indexOf(num) > -1)
-    );
+  return sets.reduce((preSet, curSet) =>
+    preSet.filter((num) => curSet.indexOf(num) > -1)
+  );
 }
-
-module.exports.gcd1 = gcd1;
 
 /**
  * method 2:
@@ -72,17 +70,15 @@ module.exports.gcd1 = gcd1;
  * @param {number} num2
  * @returns {number}
  */
-function gcd3(num1, num2) {
-    return getGCDbyEuclid(num1, num2);
+export function gcd3(num1, num2) {
+  return getGCDbyEuclid(num1, num2);
 }
 
 function getGCDbyEuclid(num1, num2) {
-    let [max, min] = num1 > num2 ? [num1, num2] : [num2, num1];
-    let mod = max % min;
-    if (mod == 0) {
-        return min;
-    }
-    return getGCDbyEuclid(min, mod);
+  let [max, min] = num1 > num2 ? [num1, num2] : [num2, num1];
+  let mod = max % min;
+  if (mod == 0) {
+    return min;
+  }
+  return getGCDbyEuclid(min, mod);
 }
-
-module.exports.gcd3 = gcd3;
